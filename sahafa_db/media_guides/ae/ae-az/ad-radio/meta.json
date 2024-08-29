@@ -1,0 +1,20 @@
+{
+    "media": "Abu Dhabi Radio",
+    "media_en": "Abu Dhabi Radio",
+    "type": "radio",
+    "media_id": "ad-radio",
+    "frequency": "98.4FM",
+    "location": "UAE, Abu Dhabi",
+    "language": "Arabic",
+    "audience": {
+        "age_range": "18-45",
+        "cultural_background": ["Emiratis", "Arabic-speaking expatriates"],
+        "countries_of_origin": ["UAE", "Egypt", "Jordan", "Lebanon", "Syria"],
+        "interests": ["Arabic music", "News", "Talk shows", "Cultural programs"],
+        "location": ["Abu Dhabi", "UAE"],
+        "gender_distribution": {"male": "67%", "female": "33%"},
+        "size_millions": "1.6"
+    },
+    "created": "2024-08-27T14:50:45+04:00",
+    "updated": "2024-08-27T14:50:45+04:00"
+}

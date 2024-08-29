@@ -1,0 +1,23 @@
+{
+    "media": "Al Rabia",
+    "media_en": "Al Rabia",
+    "type": "radio",
+    "media_id": "alrbfm-radio",
+    "frequency": "107.8FM",
+    "location": "UAE, Dubai",
+    "language": "Arabic",
+    "audience": {
+        "age_range": "18-45",
+        "cultural_background": ["Emirati", "Arab expatriates"],
+        "countries_of_origin": ["UAE", "Egypt", "Lebanon", "Jordan", "Syria", "Palestine"],
+        "interests": ["Arabic music", "News", "Talk shows", "Cultural programs"],
+        "location": ["Dubai", "UAE"],
+        "gender_distribution": {
+          "male": "71%",
+          "female": "29%"
+        },
+        "size_millions": "1.5"
+    },
+    "created": "2024-08-27T14:50:45+04:00",
+    "updated": "2024-08-27T14:50:45+04:00"
+}

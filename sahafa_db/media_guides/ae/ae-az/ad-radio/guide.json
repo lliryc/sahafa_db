@@ -1,0 +1,15 @@
+[
+    {
+        "media_id": "ad-radio",
+        "program": "Studio 1",
+        "program_en": "Studio 1",
+        "program_id": "studio1",
+        "description": "Regular program about Abu Dhabi society and every day life",
+        "schedule_description": "Broadcasts every working, Mon - Fri, from 10:00am to 12:00pm GST",
+        "timezone": "Asia/Dubai",
+        "cron": "0 10 * * 1-5",
+        "duration_minutes": 120,
+        "created": "2024-08-27T14:50:45+04:00",
+        "updated": "2024-08-27T14:50:45+04:00"
+    }
+]
