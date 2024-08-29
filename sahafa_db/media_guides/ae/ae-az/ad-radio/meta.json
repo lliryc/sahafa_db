@@ -15,6 +15,7 @@
         "gender_distribution": {"male": "67%", "female": "33%"},
         "size_millions": "1.6"
     },
+    "url": "https://vo-live-media.cdb.cdn.orange.com/Content/Channel/abu_dhabi_fm/HLS/stream_02/index.m3u8",
     "created": "2024-08-27T14:50:45+04:00",
     "updated": "2024-08-27T14:50:45+04:00"
 }

@@ -5,7 +5,7 @@
         "program_en": "Al Rabia People",
         "program_id": "rab-ppl",
         "description": "A social program that represents a link between people and officials in the country, where Abu Rashid conveys people comments that he receives live on air to officials. The program has undoubtedly succeeded in helping many solve the difficulties they faced.",
-        "schedule_description": "Broadcasts every working, Sun - Thur, from 10:00am to 01:00pm GST",
+        "schedule_description": "Broadcasts every working day, Sun - Thur, from 10:00am to 01:00pm GST",
         "timezone": "Asia/Dubai",
         "cron": "0 10 * * 0-4",
         "duration_minutes": 180,
