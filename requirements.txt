@@ -3,3 +3,7 @@
 # Add the requirements you need to this file.
 # or run `make init` to create this file automatically based on the template.
 # You can also run `make switch-to-poetry` to use the poetry package manager.
+prefect==2.20.2
+prefect-client==2.20.2
+requests==2.32.3
+langchain==0.2.15
