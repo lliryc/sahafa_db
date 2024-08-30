@@ -1,5 +1,5 @@
 from prefect import flow, task
-from typing import list
+from typing import List
 import httpx
 
 
@@ -11,7 +11,7 @@ def get_stars(repo: str):
 
 
 @flow(name="GitHub Stars")
-def github_stars(repos: list[str]):
+def github_stars(repos: List[str]):
     for repo in repos:
         get_stars(repo)
 

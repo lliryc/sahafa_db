@@ -65,7 +65,7 @@ services:
     entrypoint: "bash"
     working_dir: "/root/flows"
     volumes:
-      - "./flows:/root/flows"
+      - "${SAHAFA_DIR}/sahafa_db/flows:/root/flows"
     environment:
       - PREFECT_API_URL=http://server:4200/api
 #       Use PREFECT_API_KEY to use the CLI to interact with Prefect Cloud
