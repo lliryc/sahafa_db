@@ -54,7 +54,7 @@ services:
   worker:
     image: prefecthq/prefect:3.0.1-python3.11
     restart: always
-    entrypoint: ["/opt/prefect/entrypoint.sh", "prefect", "worker", "start", "-p", "default-worker-pool"]
+    entrypoint: ["/opt/prefect/entrypoint.sh", "prefect", "worker", "start", "-p", "default-work-pool"]
     environment:
       - AWS_ENDPOINT_URL=http://minio:9000
       - EXTRA_PIP_PACKAGES=prefect-aws==0.5.0
@@ -67,12 +67,12 @@ services:
   cli:
     image: prefecthq/prefect:3.0.1-python3.11
     entrypoint: "bash"
-    working_dir: "/opt/sahafa_db/flows"
+    working_dir: "/opt/sahafa_db/"
     volumes:
-      - "${SAHAFA_DIR}/sahafa_db/flows:/opt/sahafa_db/flows"
+      - "${SAHAFA_DIR}/sahafa_db:/opt/sahafa_db"
     environment:
       - AWS_ENDPOINT_URL=http://minio:9000
-      - EXTRA_PIP_PACKAGES=prefect-aws==0.5.0
+      - EXTRA_PIP_PACKAGES=prefect_aws==0.5.0
       - PREFECT_API_URL=http://server:4200/api
 #       Use PREFECT_API_KEY to use the CLI to interact with Prefect Cloud
 #     - PREFECT_API_KEY=YOUR_API_KEY
