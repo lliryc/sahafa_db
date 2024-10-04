@@ -25,44 +25,44 @@ pull:
 
 # the deployments section allows you to provide configuration for deploying flows
 deployments:
-- name: test-recording-deployment
+
+- name: recording_flow_ae_az_ad_radio_studio1
   version:
   tags: []
   concurrency_limit:
-  description: |-
-    A flow that retrieves star counts for multiple GitHub repositories.
-
-    Args:
-        repos (List[str]): A list of repository names in the format "owner/repo".
-
-    Returns:
-        None: Executes the get_stars task for each repository.
-  entrypoint: recording_flow.py:github_stars
-  parameters: {}
-  work_pool:
-    name: default-worker-pool
-    work_queue_name: default
-    job_variables: {}
-  enforce_parameter_schema: true
-  schedules: []
-- name: github_stars_deployment
-  version:
-  tags: []
-  concurrency_limit:
-  description: "A flow that retrieves star counts for multiple GitHub repositories.\n\
-    \nArgs:\n    repos (List[str]): A list of repository names in the format \"owner/repo\"\
-    .\n\nReturns:\n    None: Executes the get_stars task for each repository."
-  entrypoint: recording_flow.py:github_stars
-  parameters: {}
+  description: '    '
+  entrypoint: recording_flow.py:recording_flow
+  parameters:
+    path: media_guides/ae/ae-az/ad-radio
+    program_key: ad-radio-studio1
   work_pool:
     name: default-work-pool
     work_queue_name: default
     job_variables: {}
   schedules:
-  - interval: 300.0
-    anchor_date: '2024-10-01T14:22:59.359735+00:00'
-    timezone: UTC
+  - cron: 0 */4 * * *
+    timezone:
+    day_or: true
     active: true
     max_active_runs:
     catchup: false
   enforce_parameter_schema: true
+- name: test_flow
+  version:
+  tags: []
+  concurrency_limit:
+  description:
+  entrypoint: recording_flow.py:test_flow
+  parameters: {}
+  work_pool:
+    name: default-work-pool
+    work_queue_name:
+    job_variables: {}
+  enforce_parameter_schema: true
+  schedules:
+  - cron: 0 0 * * *
+    timezone: UTC
+    day_or: true
+    active: true
+    max_active_runs:
+    catchup: false

@@ -33,7 +33,7 @@ services:
     entrypoint: ["/opt/prefect/entrypoint.sh", "prefect", "server", "start"]
     environment:
       - AWS_ENDPOINT_URL=http://minio:9000
-      - EXTRA_PIP_PACKAGES=prefect-aws==0.5.0
+      - EXTRA_PIP_PACKAGES=prefect-aws==0.5.0 watchdog
       - PREFECT_UI_URL=http://127.0.0.1:4200/api
       - PREFECT_API_URL=http://127.0.0.1:4200/api
       # If you want to access Prefect Server UI from anywhere other than the Docker host machine, you will need to change
@@ -52,12 +52,12 @@ services:
 
   ## Prefect Agent
   worker:
-    image: prefecthq/prefect:3.0.1-python3.11
+    image: chelliryc/sahafa_prefect_worker:v0.2.0
     restart: always
     entrypoint: ["/opt/prefect/entrypoint.sh", "prefect", "worker", "start", "-p", "default-work-pool"]
     environment:
       - AWS_ENDPOINT_URL=http://minio:9000
-      - EXTRA_PIP_PACKAGES=prefect-aws==0.5.0
+      - EXTRA_PIP_PACKAGES=prefect-aws==0.5.0 watchdog
       - PREFECT_API_URL=http://server:4200/api
 #       Use PREFECT_API_KEY if connecting the agent to Prefect Cloud
 #     - PREFECT_API_KEY=YOUR_API_KEY
@@ -72,7 +72,7 @@ services:
       - "${SAHAFA_DIR}/sahafa_db:/opt/sahafa_db"
     environment:
       - AWS_ENDPOINT_URL=http://minio:9000
-      - EXTRA_PIP_PACKAGES=prefect_aws==0.5.0
+      - EXTRA_PIP_PACKAGES=prefect_aws==0.5.0 watchdog
       - PREFECT_API_URL=http://server:4200/api
 #       Use PREFECT_API_KEY to use the CLI to interact with Prefect Cloud
 #     - PREFECT_API_KEY=YOUR_API_KEY

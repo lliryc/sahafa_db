@@ -1,0 +1,15 @@
+FROM prefecthq/prefect:3.0.1-python3.11
+
+# Install jq
+RUN apt-get update \
+ && apt-get install -y jq \
+ && apt-get install -y --no-install-recommends ffmpeg
+
+# Set working directory
+WORKDIR /opt/prefect
+
+# Set entrypoint as bash
+ENTRYPOINT ["bash"]
+
+
+
